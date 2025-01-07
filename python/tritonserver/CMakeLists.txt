@@ -28,6 +28,11 @@ cmake_minimum_required (VERSION 3.18)
 
 project(triton-bindings LANGUAGES C CXX)
 
+# Require C++17 standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+
 # Top level module entry point and typed marker
 file(COPY __init__.py DESTINATION .)
 file(COPY py.typed DESTINATION .)
