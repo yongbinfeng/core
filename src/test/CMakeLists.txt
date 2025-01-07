@@ -156,6 +156,7 @@ if(${TRITON_ENABLE_GPU})
       protobuf::libprotobuf
       ${CNMEM_LIBRARY}
       CUDA::cudart
+      stdc++fs
   )
 
   if (NOT WIN32)
@@ -206,6 +207,7 @@ target_link_libraries(
     GTest::gtest
     GTest::gtest_main
     GTest::gmock
+    stdc++fs
 )
 
 install(
@@ -268,6 +270,7 @@ if(${TRITON_ENABLE_GPU})
       protobuf::libprotobuf
       ${CNMEM_LIBRARY}
       CUDA::cudart
+      stdc++fs
   )
 
   if (NOT WIN32)
@@ -335,6 +338,7 @@ if(${TRITON_ENABLE_GPU})
       protobuf::libprotobuf
       ${CNMEM_LIBRARY}
       CUDA::cudart
+      stdc++fs
   )
 
   if (NOT WIN32)
@@ -383,6 +387,7 @@ target_link_libraries(
     triton-common-error              # from repo-common
     GTest::gtest
     GTest::gtest_main
+    stdc++fs
 )
 
 install(
@@ -436,6 +441,7 @@ target_link_libraries(
     GTest::gtest
     GTest::gtest_main
     protobuf::libprotobuf
+    stdc++fs
 )
 
 install(
@@ -497,6 +503,7 @@ if(${TRITON_ENABLE_METRICS})
       GTest::gmock
       prometheus-cpp::core
       protobuf::libprotobuf
+      stdc++fs
   )
 
   if (TRITON_ENABLE_GPU)
@@ -556,6 +563,7 @@ target_link_libraries(
     triton-core
     GTest::gtest
     GTest::gtest_main
+    stdc++fs
 )
 
 install(
@@ -596,6 +604,7 @@ target_link_libraries(
     triton-core
     GTest::gtest
     GTest::gtest_main
+    stdc++fs
 )
 
 install(
@@ -636,6 +645,7 @@ target_link_libraries(
     triton-core
     GTest::gtest
     GTest::gtest_main
+    stdc++fs
 )
 
 install(
@@ -687,6 +697,7 @@ if(${TRITON_ENABLE_GPU})
       protobuf::libprotobuf
       CUDA::cudart
       ${CNMEM_LIBRARY}
+      stdc++fs
   )
 else()
   add_executable(
@@ -708,6 +719,7 @@ else()
       GTest::gtest
       GTest::gtest_main
       GTest::gmock
+      stdc++fs
   )
 endif() # TRITON_ENABLE_GPU
 
